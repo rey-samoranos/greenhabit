@@ -1,73 +1,51 @@
-# React + TypeScript + Vite
+#GreenHabit - AI-Powered Sustainable Habit Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##Project Overview
 
-Currently, two official plugins are available:
+GreenHabit is an AI-powered web application that helps users build eco-friendly habits through personalized weekly action plans. Users can choose environmental goals (Reduce Plastic, Save Water, Lower Energy, Cut Carbon) and receive AI-generated 7-day habit plans to track their progress and make a positive environmental impact.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##Features
 
-## React Compiler
+- 🔐 **User Authentication** - Login and Sign up with email/password
+- 🎯 **Goal Selection** - Choose from 4 environmental goals
+- 🤖 **AI-Powered Plan** - Generate personalized 7-day habit checklists
+- ✅ **Progress Tracking** - Mark habits as complete, track streaks
+- 💾 **Save Progress** - Auto-save completed plans to history
+- 📊 **Progress History** - View all past challenges with edit capabilities
+- 👤 **User Profile** - View stats and challenge history
+- 📱 **Responsive Design** - Works on desktop, tablet, and mobile
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+##Tech Stack
 
-## Expanding the ESLint configuration
+| Technology | Purpose |
+|------------|---------|
+| React + TypeScript | Frontend framework |
+| Tailwind CSS | Styling and responsive design |
+| Vite | Build tool and dev server |
+| Supabase | Backend (authentication + database) - *to be integrated* |
+| OpenAI API | AI habit plan generation - *to be integrated* |
+| Vercel | Deployment |
+| GitHub | Version control |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js (v18 or higher)
+- npm or yarn
+- Git
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Installation
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+```bash
+# Clone the repository
+git clone https://github.com/ReySamoranos/greenhabit.git
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Navigate to project folder
+cd greenhabit
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
