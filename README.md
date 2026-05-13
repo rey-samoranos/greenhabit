@@ -39,7 +39,7 @@ GreenHabit is an AI-powered web application that helps users build eco-friendly 
 
 ```bash
 # Clone the repository
-git clone https://github.com/ReySamoranos/greenhabit.git
+git clone https://github.com/rey-samoranos/greenhabit.git
 
 # Navigate to project folder
 cd greenhabit
